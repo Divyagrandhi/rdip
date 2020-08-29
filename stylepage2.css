@@ -1,0 +1,11 @@
+h1 {
+  color: red;
+}
+em{
+	color: skyblue;
+}
+body{
+	background-image:url("cssim.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
