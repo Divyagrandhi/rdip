@@ -12,13 +12,25 @@ table{
   padding: 20px;
   
 }
+.col{
+	background-color:orange;
+	}
+#col1{
+	background-color:blue;
+	}
+#col2{
+	background-color:yellow;
+	}
+#col3{
+	background-color:red;
+	}
 </style>
 </head>
 <body>
 <table style="width:30%" align="center">
   <tr>
-    <th>Subject</th>
-    <th>Marks</th> 
+    <th class="col">Subject</th>
+    <th id="col1">Marks</th> 
   </tr>
   <tr>
     <td>MPI</td>
@@ -34,15 +46,15 @@ table{
   </tr>
    <tr>
     <td>CN</td>
-    <td style="text-align:right">96</td>
+    <td id="col3" style="text-align:right">96</td>
   </tr>
   <tr>
     <td>SUP</td>
-    <td style="text-align:right">96</td>
+    <td id="col1" style="text-align:right">96</td>
   </tr>
   <tr>
     <td>AI</td>
-    <td style="text-align:right">94</td>
+    <td id="col2" style="text-align:right">94</td>
   </tr>
 </table>
 
