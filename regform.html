@@ -4,6 +4,26 @@
 <title>Registration Form</title>
 <style>
 form{text-align:center;}
+.btn {
+ width: 100px;  height: 50px;
+  color: #900;
+  background: #FF0;
+  border: 1px solid #900;
+  font-weight: bold;
+}
+
+.btn:visited {
+  color: green;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #FFF;
+  background:#900;
+}
+.btn :active {
+  color: blue;
+}
 </style>
 </head>
 <body>
@@ -50,7 +70,7 @@ form{text-align:center;}
   <input type="checkbox" id="py" name="py" value="py">
   <label for="py"> <b>Python</b></label><br><br>
 
-   <input type="submit" value="Register!">
+   <button class="btn" type="submit" value="Register">Register</button>
 
 </form> 
 </body>
