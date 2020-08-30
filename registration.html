@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>registration</title>
+<style>
+.logo{
+	margin-bottom:20px;
+}
+.link{
+	color:#71329e;
+	font-size:150%;
+	float:right;
+	margin-top:30px;
+	}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #d8d4d4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+th{
+	padding:8px;
+}
+.select{
+  border: 1px solid #ccc;
+  border-radius:3px;
+  background-color:#f2eded;
+  padding:3px;
+  width:70%;
+  
+ }
+
+</style>
+</head>
+<body>
+<a href="https://www.iiit.ac.in/"><img class="logo" src="https://www.iiit.ac.in/img/iiit-new.png" width="120" height="80"></a>
+<a class="link" href="https://serc.iiit.ac.in/rdip"><b>RDIP<b></a>
+<ul>
+  <li><a href="homepage.html">Home</a></li>
+  <li><a href="registration.html">Registration Form</a></li>
+</ul><br>
+<form action="details.html" method="get">
+<table style="width:35%">
+  <tr>
+    <th><label for="firstname">First Name:</label></th>
+    <th><input class="select" id="firstname" type="text" name="firstname" required></th>
+  </tr>
+  <tr>
+    <th><label for="E-mail">E-mail:</label></th>
+    <th><input class="select" id="E-mail" type="text" name="E-mail" required></th>
+  </tr>
+  <tr>
+    <th><label for="phnno">Phone No:</label></th>
+    <th><input class="select" id="phnno" type="text" name="phno" required></th>
+  </tr>
+  <tr>
+    <th><label for="gender">Gender:</label></th>
+    <th> <input type="radio" id="male" name="gender" value="male" required>
+<label for="male">Male</label>
+
+ <input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Other</label></th>
+  </tr>
+  <tr>
+  <th><label for="reason">Reason for RDIP</label></th>
+  <th> <input type="checkbox" name="reson" value="HTML"> HTML
+ <input type="checkbox" name="reason" value="CSS"> CSS 
+<input type="checkbox" name="reason" value="JavaScript"> Java Script</th>
+  </tr>
+  <tr>
+    <th><label for="college">College:</label></th>
+    <th><input class="select" id="college" type="text" name="college" required></th>
+  </tr>
+ <tr>
+    <th><input type="checkbox" name="declare" value="declare" required></th>
+    <th>I declare above details given by me are true</th>
+ </tr>
+ <tr>
+ <th><input type="submit" value="Submit"></th>
+ <th><input type="reset" value="Reset"></th>
+ </tr>
+</table>
+</form>
+
+</body>
+</html>
