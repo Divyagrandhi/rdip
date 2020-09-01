@@ -16,7 +16,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 </style>
 </head>
 <body>
-<table style="width:30%" align="center">
+<table style="width:30%" align="center" id="table">
   <tr>
     <th>Subject</th>
     <th>Marks</th> 
@@ -45,7 +45,32 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <td>AI</td>
     <td style="text-align:right">94</td>
   </tr>
+    <tr>
+    <td>Total</td>
+    <td style="text-align:right" id="val"></td>
+  </tr>
+    <tr>
+    <td>Average</td>
+    <td style="text-align:right" id="val2"></td>
+  </tr>
 </table>
+
+        <script>
+            
+            var table = document.getElementById("table"), sumVal = 0,avg;
+            
+            for(var i = 1; i < table.rows.length-2; i++)
+            {
+                sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+            }
+			avg=sumVal/6;
+			avg=Math.floor(avg);
+            document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
+            console.log(sumVal);
+            document.getElementById("val2").innerHTML = "avg= " + avg;
+            console.log(avg);
+
+        </script>
 
 </body>
 </html>
