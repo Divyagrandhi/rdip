@@ -28,9 +28,7 @@ form{text-align:center;}
 </head>
 <body>
 <h2 style="text-align:center;">Registration Form</h2>
-
-
-<form>
+<form action="details1.html">
   <label for="fname"><b>First name :</b></label>
 
   <input type="text" id="fname" name="fname"><br><br>
@@ -58,31 +56,42 @@ form{text-align:center;}
   </textarea><br><br>
   <p><Strong>Subject Interests:</Strong></p>
 
-  <input type="checkbox" id="oops" name="oops" value="oops">
+  <input type="checkbox" id="scc" name="oops" value="oops">
   <label for="oops"><b>oops</b></label><br>
 
-  <input type="checkbox" id="c" name="c" value="c">
+  <input type="checkbox" id="scc" name="c" value="c">
   <label for="c"> <b>c Programming</b></label><br>
 
-  <input type="checkbox" id="dbms" name="dbms" value="dbms">
+  <input type="checkbox" id="scc" name="dbms" value="dbms">
   <label for="dbms"> <b>dbms</b></label><br><br>
   
-  <input type="checkbox" id="py" name="py" value="py">
+  <input type="checkbox" id="scc" name="py" value="py">
   <label for="py"> <b>Python</b></label><br><br>
 
-<input type="submit" value="Submit" onclick="Validate()"/>
+<input type="submit" value="Submit" onclick="Val()"/>
 
 </form>
 <script type="text/javascript">
-    function Validate() {
-        var regex = /^[A-Za-z]+$/
-        var isValid = regex.test(document.getElementById("fname").value);
+    function Val() {
+        var letter =  /^[0-9]+$/;
+        var isValid = letter.test(document.getElementById("phno").value);
         if (!isValid) {
-            alert("Only Alphabets are allowed");
+            alert("It Should contain only numbers");
         }
-
-        return isValid;
+    var checkboxs=document.getElementsByName("scc");
+    var okay=false;
+    for(var i=0,l=checkboxs.length;i<1;i++)
+    {
+        if(checkboxs[i].checked)
+        {
+            okay=true;
+            break;
+        }
     }
+    if(okay){
+     }
+    else alert("Please check a checkbox");
+}
 </script> 
 </body>
 </html>
