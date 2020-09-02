@@ -1,0 +1,1 @@
+document.write("hello this is javascript example!!!.JavaScript JS for short is a full-fledged dynamic programming language that can add interactivity to a website");
