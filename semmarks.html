@@ -47,30 +47,23 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   </tr>
     <tr>
     <td>Total</td>
-    <td style="text-align:right" id="val"></td>
+    <td style="text-align:right"><p id="t"></p><script>function t2(x,y,z,a,b,c){
+  
+ return a+b+c+x+y+z;
+}
+document.getElementById("t").innerHTML =t2(81,90,90,94,96,94); 
+	</script></td>
   </tr>
     <tr>
     <td>Average</td>
-    <td style="text-align:right" id="val2"></td>
+    <td style="text-align:right" ><p id="p"></p><script>
+function s(x,y,z,a,b,c)
+{
+	return Math.floor((x+y+z+a+b+c)/6);
+}
+document.getElementById("p").innerHTML =s(81,90,90,96,96,94); 
+</script></td>
   </tr>
 </table>
-
-        <script>
-            
-            var table = document.getElementById("table"), sumVal = 0,avg;
-            
-            for(var i = 1; i < table.rows.length-2; i++)
-            {
-                sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
-            }
-			avg=sumVal/6;
-			avg=Math.floor(avg);
-            document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
-            console.log(sumVal);
-            document.getElementById("val2").innerHTML = "avg= " + avg;
-            console.log(avg);
-
-        </script>
-
 </body>
 </html>
