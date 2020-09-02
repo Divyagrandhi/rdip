@@ -30,7 +30,7 @@ form{text-align:center;}
 <h2 style="text-align:center;">Registration Form</h2>
 
 
-<form action="details.html">
+<form>
   <label for="fname"><b>First name :</b></label>
 
   <input type="text" id="fname" name="fname"><br><br>
@@ -70,8 +70,19 @@ form{text-align:center;}
   <input type="checkbox" id="py" name="py" value="py">
   <label for="py"> <b>Python</b></label><br><br>
 
-   <button class="btn" type="submit" value="Register">Register</button>
+<input type="submit" value="Submit" onclick="Validate()"/>
 
-</form> 
+</form>
+<script type="text/javascript">
+    function Validate() {
+        var regex = /^[A-Za-z]+$/
+        var isValid = regex.test(document.getElementById("fname").value);
+        if (!isValid) {
+            alert("Only Alphabets are allowed");
+        }
+
+        return isValid;
+    }
+</script> 
 </body>
 </html>
