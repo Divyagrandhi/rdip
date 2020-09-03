@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fibonacci Series</title>
+</head>
+<body>
+<p>enter the limit to generate fibonacci series(10-100):<br></p>
+<input type=text id="num">
+<input type=submit onclick="fun()">
+<p id="ans"></p>
+<script>
+	function fun(){
+	var val=document.getElementById("num").value;
+	var an="";
+	var first=0,second=1,next=0;
+	if(val>10 && val<100)
+	{
+		for(var c=0;c<val;c++)
+		{
+			if(c<=1)
+			next=c;
+			else
+			{
+				next=first+second;
+				first=second;
+				second=next;
+			}
+			an=an+" "+next;
+		}
+		document.getElementById("ans").innerHTML=an;
+	}
+	else{
+	alert("Enter proper number");
+	}
+}
+</script>
+</body>
+</html> 
