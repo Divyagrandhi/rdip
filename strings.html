@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>strings</title>
+</head>
+<body>
+<p>index starts from 0:</p>
+<p>Hypertext Markup Language(HTML) is the standard markup language for documents designed to be displayed in a web browser</p>
+<button onclick="myfunction()">Words</button>
+<p id="demo"></p>
+<script>
+function myfunction(){
+var str="Hypertext Markup Language(HTML) is the standard markup language for documents designed to be displayed in a web browser";
+var arr=str.split(" ");
+document.getElementById("demo").innerHTML=arr[4]+"<br>"+arr[6]+"<br>"+arr[9]+"<br>";
+}
+</script>
+</body>
+</html>
